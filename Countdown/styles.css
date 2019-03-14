@@ -1,0 +1,56 @@
+#countdown{
+    font-family: sans-serif;
+    color: #aaa7a7;
+    font-size: 30px; 
+}
+.countdown-Item{
+    border:1px solid #aaa7a7;
+    width: 120px;
+    height: 80px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-top:30px;
+}
+.countdown-value{
+    font-family: sans-serif;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    margin-top:15px;
+}
+.countdown-text{
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color:#aaa7a7;
+    font-weight: bold;
+    margin-top:5px;
+}
+
+#duedate{
+    color:#aaa7a7;
+    margin-top:130px;
+    position:fixed;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 585px) {
+
+    .countdown2, .countdown1{
+       width:290px;
+       height: 130px;
+margin:auto;
+    }
+    .countdown-Item{
+       margin-left: 10px !important;
+       align-items: center;
+    }
+    #duedate{
+        margin-top:20px;
+    }
+ 
+}
