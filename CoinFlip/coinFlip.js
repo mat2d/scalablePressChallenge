@@ -13,12 +13,15 @@ function randomNumber(n){
         number_length = n.toString().length;
         unix_date = Date.now().toString().split("").reverse().toString().replace(/,/g, '');
         pointer = 0;
-        while(omega == false){ 
-            random_number = unix_date.substring(pointer, pointer + number_length);
-            if(parseInt(random_number) < n && flip() == true ){
-                omega = true;
-            }
-            pointer ++;
+        while(omega == false){
+          if(pointer== unix_date.toString().length -1){
+            pointer = 0;
+          }
+          random_number = unix_date.substring(pointer, pointer + number_length);
+          if(parseInt(random_number) < n && flip() && random_number != 0){
+            omega = true;
+          }
+          pointer ++;
         }
     }
 return parseInt(random_number);
