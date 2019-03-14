@@ -1,4 +1,8 @@
-function flip(n){
+function flip() {
+  return Math.random() >= 0.5;
+}
+
+function randomNumber(n){
     if (n <= 0 || n > 1000000){
     throw "ERROR - n value not allowed";
     }
@@ -11,7 +15,7 @@ function flip(n){
         pointer = 0;
         while(omega == false){ 
             random_number = unix_date.substring(pointer, pointer + number_length);
-            if(parseInt(random_number) < n){
+            if(parseInt(random_number) < n && flip() == true ){
                 omega = true;
             }
             pointer ++;
@@ -19,11 +23,12 @@ function flip(n){
     }
 return parseInt(random_number);
 }
-flip(-150);
-flip(-1);
-flip(0);
-flip(0);
-flip(1000001);
+randomNumber(-150);
+randomNumber(-1);
+randomNumber(0);
+randomNumber(500);
+randomNumber(98786543);
+randomNumber(1000001);
 
 
 
